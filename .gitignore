@@ -1,0 +1,10 @@
+cat << 'EOF' > .gitignore
+venv/
+.venv/
+env/
+*.db
+*.sqlite3
+.env
+__pycache__/
+*.py[cod]
+EOF
