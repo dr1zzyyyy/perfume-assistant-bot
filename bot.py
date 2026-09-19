@@ -1,5 +1,7 @@
 import asyncio
 import logging
+import os
+import re
 from aiogram import Bot, Dispatcher, F, types
 from aiogram.filters import CommandStart, Command
 from aiogram.fsm.context import FSMContext
@@ -8,14 +10,20 @@ from aiogram.fsm.storage.memory import MemoryStorage
 from aiogram.utils.keyboard import ReplyKeyboardBuilder
 import aiosqlite
 import httpx
-import re
 from openai import AsyncOpenAI
 from apscheduler.schedulers.asyncio import AsyncIOScheduler
+from dotenv import load_dotenv
+
+# Подгружаем переменные из файла .env
+load_dotenv()
 
 # ================= КОНФИГ =================
-BOT_TOKEN = "ваш_токен_telegram_бота"
-GROQ_API_KEY = "ваш_токен_с_https://console.groq.com/home"
+BOT_TOKEN = os.getenv("BOT_TOKEN")
+GROQ_API_KEY = os.getenv("GROQ_API_KEY")
 DB_NAME = "perfume_bot.db"
+
+if not BOT_TOKEN or not GROQ_API_KEY:
+    raise ValueError("Не найдены BOT_TOKEN или GROQ_API_KEY. Заполни их в файле .env!")
 
 # Инициализация
 bot = Bot(token=BOT_TOKEN)

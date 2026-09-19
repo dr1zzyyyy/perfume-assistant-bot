@@ -1,4 +1,3 @@
-cat << 'EOF' > README.md
 # 🧴 Персональный Парфюм-Гид (Telegram Bot)
 
 Телеграм-бот для подбора ароматов под текущую погоду на базе Aiogram 3 и нейросети Qwen (через Groq API).
@@ -14,4 +13,14 @@ cat << 'EOF' > README.md
 1. Клонируй репозиторий:
    ```bash
    git clone [https://github.com/dr1zzyyyy/perfume-assistant-bot.git](https://github.com/dr1zzyyyy/perfume-assistant-bot.git)
-   cd perfume-bot
+   cd perfume-assistant-bot
+
+2. Пропиши свои токены в .env:
+   ```bash
+   BOT_TOKEN - токен бота Telegram
+   ROQ_API_KEY - API токен с ttps://console.groq.com/home
+
+3. Выполняй запуск бота:
+   ```bash
+   run.sh - Linux
+   run.bat - Windows
