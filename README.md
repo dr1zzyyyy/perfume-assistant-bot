@@ -12,7 +12,7 @@
 
 1. Клонируй репозиторий:
    ```bash
-   git clone [https://github.com/dr1zzyyyy/perfume-assistant-bot.git](https://github.com/dr1zzyyyy/perfume-assistant-bot.git)
+   git clone https://github.com/dr1zzyyyy/perfume-assistant-bot.git
    cd perfume-assistant-bot
 
 2. Пропиши свои токены в .env:
